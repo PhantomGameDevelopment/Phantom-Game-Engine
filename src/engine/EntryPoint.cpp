@@ -1,7 +1,7 @@
 #include "log/Logger.h"
 
 int main(void) {
-	Phantom::Logger::EnableFileOutput();
+	Phantom::Logger::EnableFileOutput("logs/output.log");
 	Phantom::Logger::SetPriority(Phantom::All);
 	Phantom::Logger::Trace("This is a trace message");
 	Phantom::Logger::Info("This is an info message");
@@ -9,5 +9,4 @@ int main(void) {
 	Phantom::Logger::Warn("This is a warning message");
 	Phantom::Logger::Error("This is an error message");
 	Phantom::Logger::Fatal("This is a fatal message");
-	Phantom::Logger::DisableFileOutput();
 }
