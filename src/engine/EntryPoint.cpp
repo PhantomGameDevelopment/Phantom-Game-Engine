@@ -1,5 +1,6 @@
-#include <iostream>
+#include "log/Logger.h"
 
 int main(void) {
-	std::cout << "Hello World 2!" << std::endl;
+	Phantom::Logger::SetPriority(Phantom::LogPriority::All);
+	Phantom::Logger::Trace("Hello World (%d, %s)", 5, "Hein Dekkers");
 }
